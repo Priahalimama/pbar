@@ -1,0 +1,15 @@
+<canvas id="myCanvas" width="400" height="50"></canvas>
+<script>
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+
+  function drawProgressBar(percentage) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "blue";
+    const width = (canvas.width * percentage) / 100;
+    ctx.fillRect(0, 0, width, canvas.height);
+  }
+
+  // Пример использования
+  drawProgressBar(10);
+</script>
